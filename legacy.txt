@@ -1,0 +1,43 @@
+
+# class LineSet(object):
+#     pts=None
+#     lines=[]
+#     def __init__(self,polyline):
+#         def line_append(p1,p2):
+#             if p1!=p2:
+#                 self.lines.append(Segment(p1, p2))
+#         self.pts=pts=polyline.points()
+#         pre=origin=None
+#         cgPts = []
+#         for pt in pts:
+#             pt=utils.tuple_int(pt)
+#             cgPts.append(Point(pt))
+#             if not pre is None:
+#                 line_append(pre,pt)
+#             else:
+#                 origin=pt
+#             pre=pt
+#         line_append(pre,origin)
+#         # generator polygon
+#         self.poly=Polygon(*cgPts)
+#         print(self.poly)
+#
+#     def test(self):
+#         r=10
+#         pt=self.lines[0].p1
+#         C=Circle(pt,r)
+#         I=C.intersect(self.poly)
+#         print(I)
+#         exit(0)
+#         for l in self.lines:
+#             if l.p1 is pt or l.p2 is pt:
+#                 continue
+#             I=C.intersect(l) #交集
+#             if not I is EmptySet():
+#                 for i in I:
+#                     print(utils.tuple_int(i))
+#     def display(self,canvas):
+#         for line in self.lines:
+#             cv2.line(canvas, tuple(line.p1), tuple(line.p2) , (0, 0, 0),2)
+        # plt.imshow(canvas)
+        # plt.show()

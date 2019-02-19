@@ -1,0 +1,1 @@
+potrace-linux/potrace in.bmp  -b dxf -o out.dxf
